@@ -5,18 +5,20 @@ workflows:
     instance_type: linux_x2
     environment:
       node: 20.11.0
+      java: 17
     scripts:
-      - name: Install dependencies
+      - name: Clean install dependencies
         script: |
+          rm -rf node_modules package-lock.json
           npm install
-      - name: Install Expo CLI and prebuild
+      - name: Prebuild native Android project
         script: |
-          npx expo prebuild --platform android
+          npx expo prebuild --platform android --clean
       - name: Build Android APK
         script: |
           cd android
-          ./gradlew assembleRelease
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
     artifacts:
-      - android/app/build/outputs/**/*.apk
-
+  - android/app/build/outputs/**/*.apk
 
