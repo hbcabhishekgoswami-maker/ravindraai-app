@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Ravindra AI",
+    "slug": "ravindraai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0B0B0D"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.ravindra.ravindraai",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0B0D"
+      }
+    },
+    "plugins": ["expo-router"],
+    "scheme": "ravindraai"
+  }
+}
