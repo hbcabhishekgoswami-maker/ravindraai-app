@@ -3,27 +3,21 @@ workflows:
     name: RavindraAI Android Build
     max_build_duration: 60
     instance_type: mac_mini_m2
+
     environment:
       node: 20.11.0
       java: 17
+
     scripts:
-      - name: Clean install dependencies
+      - name: Install dependencies
         script: |
-          rm -rf node_modules package-lock.json
           npm install
-      - name: Prebuild native Android project
-        script: |
-          npx expo prebuild --platform android --clean
-      - name: Fix Gradle and Plugins
-        script: |
-          cd android
-          ./gradlew wrapper --gradle-version 8.5
-          cd ..
+
       - name: Build Android APK
         script: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon
+          ./gradlew assembleRelease
+
     artifacts:
       - android/app/build/outputs/**/*.apk
-      
