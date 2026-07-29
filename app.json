@@ -9,7 +9,9 @@
     "splash": {
       "backgroundColor": "#0B0B0D"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
       "package": "com.ravindra.ravindraai",
       "versionCode": 1,
@@ -17,7 +19,12 @@
         "backgroundColor": "#0B0B0D"
       }
     },
-    "plugins": ["expo-router"],
-    "scheme": "ravindraai"
+    "plugins": [
+      "expo-router"
+    ],
+    "scheme": "ravindraai",
+    "ios": {
+      "bundleIdentifier": "com.ravindra.ravindraai"
+    }
   }
 }
