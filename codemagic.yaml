@@ -17,7 +17,7 @@ workflows:
       - name: Configure Gradle Version
         script: |
           cd android
-          ./gradlew wrapper --gradle-version 8.8
+          ./gradlew wrapper --gradle-version 8.2
           cd ..
       - name: Build Android APK
         script: |
