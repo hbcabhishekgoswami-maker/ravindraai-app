@@ -33,8 +33,7 @@ export default function PulseMark({ size = 64 }) {
   return (
     <View style={{ width: size, height: size, alignItems: "center", justifyContent: "center" }}>
       <Image
-        source={require("../assets/images/logo-mark.png")}
-        style={{
+        source={require("../assets/images/logo-mark.jpg")}        style={{
           width: size,
           height: size,
           borderRadius: size * 0.28,
