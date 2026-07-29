@@ -14,10 +14,10 @@ workflows:
       - name: Prebuild native Android project
         script: |
           npx expo prebuild --platform android --clean
-      - name: Force Gradle Version Fix
+      - name: Configure Gradle Version
         script: |
           cd android
-          ./gradlew wrapper --gradle-version 8.4
+          ./gradlew wrapper --gradle-version 8.8
           cd ..
       - name: Build Android APK
         script: |
